@@ -8,4 +8,4 @@ disp(x)
 
 disp('~~ Shifted column vector ~~')
 b = A*x;
-disp(b)
+disp(b) %% RAAAAAA
