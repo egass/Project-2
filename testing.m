@@ -10,7 +10,7 @@ A = flip(eye(1024)); % This creates a flipped identity matrix of size 1024x1024 
 
 % This makes use of hmwk 6, we learned that left hand multiplication swaps
 % rows and right hand mult. swaps columns. If we use both at the same time
-% we can flip an image 180 degrees as seen in this example
+% we can rotate an image 180 degrees as seen in this example
 
 X_flip(:,:,1) = A*X_double(:,:,1)*A;
 X_flip(:,:,2) = A*X_double(:,:,2)*A;
