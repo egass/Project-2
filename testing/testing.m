@@ -4,6 +4,7 @@ X_int = imread('square.jpg'); % Read in the image
 X_double = double(X_int); % Convert to a double
 A = flip(eye(1024)); % This creates a flipped identity matrix of size 1024x1024 which is the size of the image
 
+
 % | 0 0 1 | %
 % | 0 1 0 | %
 % | 1 0 0 | %
