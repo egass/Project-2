@@ -18,3 +18,5 @@ imagesc(uint8(X_2intensity))
 title('2x Image Intensity')
 hold off
 
+imwrite(uint8(X_2intensity),"increasedIntensity5_1_2.jpg")
+
