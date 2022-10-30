@@ -19,8 +19,8 @@ X_double(:,:,1) = X_double(:,:,1) * T; %% Modify the image matrix to have the sh
 X_double(:,:,2) = X_double(:,:,2) * T;
 X_double(:,:,3) = X_double(:,:,3) * T;
 
-figure();
-hold on
+
 imagesc(uint8(X_double)) %% Print the image
-hold off
+
+imwrite(uint8(X_double),'shiftedRectangle5_1_5.jpg')
 
