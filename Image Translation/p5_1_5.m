@@ -20,7 +20,7 @@ X_double(:,:,2) = X_double(:,:,2) * T;
 X_double(:,:,3) = X_double(:,:,3) * T;
 
 
-imagesc(uint8(X_double)) %% Print the image
+ imagesc(uint8(X_double)) %% Print the image
 
 imwrite(uint8(X_double),'shiftedRectangle5_1_5.jpg')
 
