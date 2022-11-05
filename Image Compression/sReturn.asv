@@ -1,5 +1,5 @@
 I = eye(5);
-disp(sReturn(I)*sReturn(I))
+disp
 function [s] = sReturn(matr)
 %since in this project the matrices are guaranteed to be square (nxn), I
 %can get the size of just one dimension.
