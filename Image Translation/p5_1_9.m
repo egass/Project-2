@@ -28,3 +28,5 @@ X_double(:,:,3) = B * X_double(:,:,3) * E;
 figure();
 imagesc(uint8(X_double)) % Print the image
 
+imwrite(uint8(X_double),'CroppedImage.jpg')
+
