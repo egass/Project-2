@@ -12,6 +12,6 @@ X_double(:,:,2) = T * X_double(:,:,2);
 X_double(:,:,3) = T * X_double(:,:,3);
 
 imagesc(uint8(X_double))
-imwrite(X_double, 'flipRectangle.jpg')
+imwrite(uint8(X_double), 'flipRectangle.jpg')
 
             
