@@ -33,9 +33,9 @@ subplot(1,2,2);
 imagesc(uint8(finalImg));
 title('Compressed image');
 hold off
-imwrite(uint8(finalImg),"Pvalue=4.jpg");
+imwrite(uint8(finalImg),"Pvalue=.05.jpg");
 function [compressed_frequency] = filter(img)
-p = 4;
+p = .05;
 n = size(img,1);
 compressed_frequency = zeros(1, n);
 for i = 1:n
