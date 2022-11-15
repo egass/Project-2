@@ -4,7 +4,7 @@ X_double = double(A);
 I = eye(m);
 spy(I) 
 
-T = I(:,end:-1:1); %% loop backwards through identity matrix and make T matrix
+T = I(:,m:-1:1); %% loop backwards through identity matrix and make T matrix
 spy(T)
 
 X_double(:,:,1) = T * X_double(:,:,1); %% Modify the image matrix to have the shifted pixels
