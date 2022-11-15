@@ -12,17 +12,30 @@ finalRed = sReturn(newRedFrequencies)*newRedFrequencies*sReturn(newRedFrequencie
 %compressing the green channel
 imGreenComp = sReturn(imgGreen)*imgGreen*sReturn(imgGreen);
 newGreenFrequencies = filter(imGreenComp);
-finalGreen = sReturn(newGreenFrequencies)*newGreenFrequencies*sReturn(newGreenFrequencies));
+finalGreen = sReturn(newGreenFrequencies)*newGreenFrequencies*sReturn(newGreenFrequencies);
 
 %compressing the blue channel
 imBlueComp = sReturn(imgBlue)*imgBlue*sReturn(imgBlue);
 newBlueFrequencies = filter(imBlueComp);
 finalBlue = sReturn(newBlueFrequencies)*newBlueFrequencies*sReturn(newBlueFrequencies);
 
+finalImg(:,:,1) = finalRed;
+finalImg(:,:,2) = finalGreen;
+finalImg(:,:,3) = finalBlue;
 
+figure();
+hold on
+subplot(1,2,1);
+imagesc(uint8(double_img));
+title('Original Image');
 
+subplot(1,2,2);
+imagesc(uint8(finalImg));
+title('Compressed image');
+hold off
+imwrite(uint8(finalImg),"Pvalue=.3.jpg");
 function [compressed_frequency] = filter(img)
-p = .5;
+p = .3;
 n = size(img,1);
 compressed_frequency = zeros(1, n);
 for i = 1:n
