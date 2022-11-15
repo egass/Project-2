@@ -1,7 +1,28 @@
-I = eye(5);
-disp(sReturn(I)*sReturn(I))
-I2 = eye(5);
-disp(sReturn(I2))
+img = imread('square.jpg');
+double_img = double(img);
+imgRed= double_img(:,:,1); 
+imgGreen = double_img(:,:,2);
+imgBlue = double_img(:,:,3);
+
+%Compressing the red channel
+imRedComp = sReturn(imgRed)*imgRed*sReturn(imgRed);
+p=0.5;
+% when p=0, no data are saved
+% when p=1, all data are saved
+for i = 1:n
+    for j = 1:n
+        if (i+j > p*2*n)
+            imRedComp(i,j) = 0;
+        end
+    end
+end
+
+
+
+
+
+
+
 function [s] = sReturn(matr)
 %since in this project the matrices are guaranteed to be square (nxn), I
 %can get the size of just one dimension.
