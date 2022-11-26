@@ -37,10 +37,10 @@ for i = 1:3
 end
 
 %slightly modified filter function where p is taken as an input argument
-%and not set in the function
+%and not set d
 function [compressed_frequency] = filter(img, p)
 n = size(img,1);
-compressed_frequency = zeros(n, n);
+compressed_frequency = zeros(1, n);
 for i = 1:n
     for j = 1:n
         if((i+j)>p*2*n)
@@ -60,7 +60,7 @@ function [s] = sReturn(matr)
 n = size(matr, 1);
 %I preallocate the memory here to have an nxn matrix because this is faster
 %than reallocating the memory each time I add an element to the array
-s = zeros(n, n);
+s = zeros(1, n);
 mult = sqrt(2/n);
 for i = 1:n
     for j = 1:n

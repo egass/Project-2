@@ -1,7 +1,13 @@
+clear; close all;
+%read the image into a matrix img
 img = imread('square.jpg');
+%converts it into matrix of doubles
 double_img = double(img);
+%imgRed for the red channel of the image
 imgRed= double_img(:,:,1); 
+%imgGreen for the green channel of the image
 imgGreen = double_img(:,:,2);
+%imgBlue for the blue channel of the image
 imgBlue = double_img(:,:,3);
 
 %Compressing the red channel
@@ -33,9 +39,9 @@ subplot(1,2,2);
 imagesc(uint8(finalImg));
 title('Compressed image');
 hold off
-imwrite(uint8(finalImg),"Pvalue=.3.jpg");
+%imwrite(uint8(finalImg),"Pvalue=.05.jpg");
 function [compressed_frequency] = filter(img)
-p = .3;
+p = .1;
 n = size(img,1);
 compressed_frequency = zeros(1, n);
 for i = 1:n
