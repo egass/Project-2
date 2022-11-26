@@ -8,7 +8,7 @@ function [s] = sReturn(matr)
 n = size(matr, 1);
 %I preallocate the memory here to have an nxn matrix because this is faster
 %than reallocating the memory each time I add an element to the array
-s = zeros(1, n);
+s = zeros(n, n);
 mult = sqrt(2/n);
 for i = 1:n
     for j = 1:n
