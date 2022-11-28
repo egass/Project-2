@@ -51,9 +51,9 @@ title('Compressed image');
 hold off
 %imwrite(uint8(finalImg),"Pvalue=.05.jpg");
 function [compressed_frequency] = filter(img)
-p = .1;
+p = .2;
 %creating matrix of zeros because preallocating is faster than allocating
-%during runtime
+%during runtime 
 n = size(img,1);
 compressed_frequency = zeros(n, n);
 for i = 1:n
